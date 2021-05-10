@@ -1,0 +1,56 @@
+<mvc:View
+    controllerName="ui5project1.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:layout="sap.ui.layout"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+				<Table id="idProductsTable"
+                        inset="false"
+                        items="{/ProductSet}" growingThreshold="5" growing="true">
+                        <columns>
+                            <Column>
+                                <Text text="Product ID" />
+                            </Column>
+                            <Column>
+                                <Text text="Supplier" />
+                            </Column>
+							<Column>
+                                <Text text="Category" />
+                            </Column>
+                            
+                        </columns>
+                        <items>
+                            <ColumnListItem type="Navigation" press="onRowSelected">
+                                <cells>
+                                    <Text
+                                        
+                                        text="{ProductID}"/>
+                                    <Text
+                                        text="{SupplierName}" />
+										<Text
+                                        text="{Category}" />
+                                    
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                   <!-- <Panel id="productDetailsPanel" headerText="Product details" visible="false">
+                        <layout:Grid>
+                        <Text text="Product ID= {ProductID}"/>
+                        <Text text="Product name: {Category}"/>
+                        <Text text="Description:\n {Description}"/>
+                        <Text text="Price: {Price}"/>
+                        </layout:Grid>
+					</Panel> -->
+                     <Text id="demoText"/>
+					<content />
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

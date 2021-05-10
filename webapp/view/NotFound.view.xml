@@ -1,0 +1,14 @@
+<mvc:View
+	controllerName="ui5project1.controller.Detail"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<MessagePage
+		title="Not Found"
+		text="Not Found"
+		icon="{sap-icon://document}"
+		id="page">
+		<customDescription>
+			<Link id="link" text="Go to previous page" press="onNavBack" />
+		</customDescription>
+	</MessagePage>
+</mvc:View>
